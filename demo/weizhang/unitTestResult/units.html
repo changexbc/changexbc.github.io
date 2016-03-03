@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>单元测试 - 订单详情</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/overwrite.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/c3.css"/>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <span class="glyphicon glyphicon-list-alt navbar-brand"/>
+        </div>
+        <h3 class="navbar-text">单元测试</h3>
+        <h4 class="nav navbar-nav navbar-text ow-sub-title">订单详情</h4>
+      </div>
+    </nav>
+    <div class="container-fluid position-offset">
+      <div class="row">
+        <div class="col-xs-2 sidebar-offcanvas" id="sidebar" role="navigation">
+          <ul class="nav nav-sidebar">
+            <li class="active top">
+              <a href="#">Overview</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-10 main">
+          <div id="chart"></div>
+          <ul class="nav nav-tabs" id="myTab">
+            
+            <li class="active">
+              
+              <a href="#PhantomJS" data-toggle="tab">PhantomJS 2.1.1 (Mac OS X 0.0.0)</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            
+            <div class="tab-pane fade" id="PhantomJS">
+              <table class="table table-bordered table-hover">
+                <caption class="">Test Results running in PhantomJS 2.1.1 (Mac OS X 0.0.0) Timestamp: 2016-02-16 19:31:03</caption>
+                <tr>
+                  <td colspan="3">
+                    1 tests / 
+                    0 errors / 
+                    0 failures / 
+                    0 skipped / 
+                    runtime: 0s
+                  </td>
+                </tr>
+                <tr class="header">
+                  <td>Status</td>
+                  <td>Spec</td>
+                  <td>Suite / Results</td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0s</td>
+                  <td>App</td>
+                  <td class="specs-def">
+                    <div class="">components-App</div>
+                  </td>
+                </tr>
+                <tr class="system-out">
+                  <td colspan="3"><strong>System output:</strong><br />PhantomJS 2.1.1 (Mac OS X 0.0.0) LOG: Object{loadingShow: false}
+</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="pull-right"/>
+    </footer>
+    <script src="assets/js/d3.js"></script>
+    <script src="assets/js/c3.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
