@@ -20,7 +20,7 @@
                 :stroke="strokeColorProcess"
                 :stroke-dasharray='dasharray'
                 fill="none"
-                transform="matrix(0,-1,1,0,0,80)">
+                transform="rotate(-90, 40,40)">
             </circle>
         </svg>
     </div>
@@ -117,6 +117,9 @@
     @import "../sass/variables";
     @import "../sass/extends";
     @import "../sass/mixins";
+    .circle-rotate{
+        transform:rotate(90deg);
+    }
     .loading-process{
         @extend %font-display1;
         color:$importColor;

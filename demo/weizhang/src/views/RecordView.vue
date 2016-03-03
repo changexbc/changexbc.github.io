@@ -15,7 +15,9 @@
 
                     <tab-box class="process-type" v-show="info_loaded" transition="fade">
                         <tab name='在线处理'>
-                            在线处理内容
+                            <footer class="footer" >
+                                <a class="button" @click='goPage'>回到首页</a>
+                            </footer>
                         </tab>
                         <tab name='窗口处理'>
                             窗口处理内容
@@ -24,6 +26,7 @@
                 </section>
 
             </div>
+
 
         </div>
     </div>
@@ -51,7 +54,7 @@
                 transition.next()
                 setTimeout(() => {
                     this.info_loaded = true
-                },2000)
+                },3000)
             }
         },
         computed:{
@@ -60,7 +63,12 @@
             }
         },
         methods:{
-
+            goPage(){
+                let router = this.$route.router
+                router.go({
+                    name: 'index'
+                });
+            }
         },
         directives: {
 
@@ -117,6 +125,10 @@
         .process-type{
             padding-top:20px;
             transition:opacity ease .4s .2s;
+        }
+        .footer{
+            margin:16px;
+            padding-top:300px;
         }
     }
 </style>
