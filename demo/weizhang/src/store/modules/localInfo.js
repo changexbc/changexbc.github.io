@@ -4,8 +4,8 @@ console.log(cityList)
 // initial state
 // shape: [{ id, quantity }]
 const localInfoInitialState = {
-    cityId : '',
-    cityName : '',
+    cityId : '92',
+    cityName : '杭州',
     cityList : cityList,
     registerStep : 2
 }
