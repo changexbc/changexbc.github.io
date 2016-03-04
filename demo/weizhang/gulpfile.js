@@ -76,7 +76,8 @@ gulp.task("webpack:prod", ['clean'], function(callback) {
             "Zepto": "zepto",
             "window.Zepto": "zepto",
             "_": "lodash",
-            "FastClick": "fastclick"
+            "FastClick": "fastclick",
+            "Daze":path.join(__dirname,'src/libs_native/native')
         }),
         new webpack.DefinePlugin({
             '__DEV__': false,
