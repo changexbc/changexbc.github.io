@@ -20,5 +20,5 @@ export const setCity = ({ dispatch, state }, city ) => dispatch(types.SET_CITY, 
 export const setUserId = ({ dispatch, state }, id) => dispatch(types.SET_USERID, id)
 export const setCardPrice = ({ dispatch, state }, priceArr) => dispatch(types.SET_CARDPRICE, priceArr)
 export const addCard = ({ dispatch, state }, card) => dispatch(types.ADD_CARD, card)
-export const editCard = ({ dispatch, state }, card) => dispatch(types.EDIT_CARD, card)
+export const editCard = ({ dispatch, state }, index, card) => dispatch(types.EDIT_CARD, index, card)
 export const deleteCard = ({ dispatch, state }, card) => dispatch(types.DELETE_CARD, card)

@@ -91,7 +91,7 @@
                 title='删除油卡'
                 text='确定删除此油卡？'
                 :show.sync='modal_deleteCard_show'
-                :on-confirm='deleteCard'>
+                :on-confirm='removeCard'>
             </modal-confirm>
 
 
@@ -102,7 +102,7 @@
 
 <script>
     import { Promise } from 'es6-promise'
-    import { setMsgTip } from '../vuex/actions'
+    import { addCard, editCard, deleteCard, setMsgTip } from '../vuex/actions'
     import modalConfirm from '../components/ModalConfirm.vue'
 
     export default {
@@ -127,7 +127,10 @@
 
             },
             actions:{
-                setMsgTip
+                setMsgTip,
+                addCard,
+                editCard,
+                deleteCard,
             }
         },
         computed:{
@@ -181,7 +184,7 @@
                 if(!this.routerCardNum){
                     let isExist = _.find(this.cards,(value,index) => value.num == this.card.num)
                     if(!isExist){
-                        addCard(this.card)
+                        this.addCard(this.card)
                         this.setMsgTip('添加油卡成功！')
                     }
                     else{
@@ -190,14 +193,14 @@
                     }
                 }
                 else{
-                    editCard(this.cardIndex, this.card)
+                    this.editCard(this.cardIndex, this.card)
                     this.setMsgTip('保存油卡成功！')
                 }
                 this.goIndex()
 
             },
-            deleteCard(){
-                deleteCard(this.cards[this.cardIndex])
+            removeCard(){
+                this.deleteCard(this.cards[this.cardIndex])
                 this.setMsgTip('删除油卡成功！')
                 this.goIndex()
             },
