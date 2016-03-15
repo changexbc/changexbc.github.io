@@ -17,7 +17,7 @@ var webpackConfig = require("./webpack.config.js")
 
 
 
-var appId = '10000026'
+var appId = 'weizhang'
 var buildPath = 'build_folder/'+appId
 var buildTime = function() {
     var timestamp = new Date().getTime()

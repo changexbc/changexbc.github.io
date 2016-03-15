@@ -2,17 +2,7 @@
 
 
 const convertRequestURL = function(url) {
-    let converted_url
-    if(__PROD__){
-        converted_url = "http://app.qichekb.com/"+url
-    }
-    else if(__PRE__){
-        converted_url = "http://192.168.10.4:9880/"+url
-    }
-    else{
-        converted_url = "http://192.168.10.4:9880/"+url
-    }
-    return converted_url
+
 }
 
 const getQueryString = function (url) {
