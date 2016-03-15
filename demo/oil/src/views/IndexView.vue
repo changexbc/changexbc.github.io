@@ -243,10 +243,12 @@
                 let promise_getChargeAmount1 = indexApi.getChargeAmount({ userid:this.userId, cardType:1 })
                 Promise.all([promise_getChargeAmount0, promise_getChargeAmount1])
                 .then(results => {
-                    this.setCardPrice({
-                        zsh:results[0],
-                        zsy:results[1]
-                    })
+                    setTimeout(()=>{
+                        this.setCardPrice({
+                            zsh:results[0],
+                            zsy:results[1]
+                        })
+                    },2000)
                 })
                 .catch(errors => { console.error(errors) })
             },
