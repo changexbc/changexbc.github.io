@@ -1,1 +1,0 @@
-{"data":{"list":[{"price":"5.54","oilType":"93"},{"price":"5.9","oilType":"97"}]},"code":0}
